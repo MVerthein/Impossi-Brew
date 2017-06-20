@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!--
+    normalize.css removes cross-browser differences in defaults, e.g.,
+    differences in how form elements appear between Firefox and IE
+    See: http://necolas.github.com/normalize.css/
+  -->
+  <link rel="stylesheet" href="/css/normalize.css">
+  <!--
+    application.css is where you put your styles
+  -->
+  <link rel="stylesheet" href="/css/application.css">
+  <link href='https://fonts.googleapis.com/css?family=Passion+One' rel='stylesheet' type='text/css'>
+
+  <script src="/js/jquery.js"></script>
+  <script src="/js/application.js"></script>
+  <script src="/js/styles.js"></script>
+
+  <title></title>
+</head>
+<body>
+  <header>
+    <div class="logo">
+      <h2><a href="/">Impossi-Brew</a></h2>
+      <p class="login-bar"><a href="/session/login">Login</a> | <a href="/users/new">Register</a></p>
+    </div>
+    <div class="search-bar">
+      <form class="search " action="/search" method="get">
+        <input class="search-box" name="query" type="text" placeholder="Search by style or a specific beer">
+        <input class="search-button" type="submit" value="Search">
+      </form>
+      <form class="set-location " action="/" method="get">
+        <input class="location-box" name="zip_code" type="text" placeholder="Zip Code">
+        <input class="zip-button" type="submit" value="Set">
+      </form>
+      <% if session[:location] %>
+        <p>Current Location: <%= session[:location]  %></p>
+      <% end %>
+    </div>
+  </header>
+  <div class="links">
+      <a href="/categories">Categories</a>
+      <a href="/styles">Styles</a>
+      <a href="/location">Locations</a>
+      <a href="/about">About</a>
+    </div>
+  <br>
+  <br>
+  <div class="body">
+  <%= yield %>
+</div>
+</body>
+</html>

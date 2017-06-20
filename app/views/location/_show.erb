@@ -1,0 +1,8 @@
+<ul>
+  <% locations.businesses.each do |loc| %>
+    <li><a href="<%=loc.url%>"><%= loc.name %></a></li>
+    <ul>
+      <li><%= loc.location.display_address.join(' ') %></li>
+    </ul>
+  <%end%>
+</ul>

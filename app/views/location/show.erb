@@ -1,0 +1,24 @@
+<div class="register">
+  <h3> Location Search</h3>
+  <form class="reg-form" action="/location" method="post">
+  <label for"location">Location:</label>
+  <input name="location" type="text" placeholder="Address City or Zip">
+  <label for"style">Beer Style:</label>
+  <input name="style" type="text">
+  <input type="submit" value="Search">
+  </form>
+  <br>
+</div>
+<br>
+<div class="loc-search-results">
+  <%if @locations%>
+    <ul class="first-ul">
+    <% @locations.businesses.each do |loc| %>
+      <li><a href="<%=loc.url%>"><%= loc.name %></a></li>
+      <ul>
+        <li><%= loc.location.display_address.join(' ') %></li>
+      </ul>
+    <%end%>
+    </ul>
+  <%end%>
+</div>

@@ -1,0 +1,19 @@
+<h2><%= @brewery.address %></h2>
+
+<div>
+  <p>Address: <%= @brewery.address %></p>
+  <p>Latitude: <%= @brewery.latitude %></p>
+  <p>Longitude: <%= @brewery.longitude %></p>
+</div>
+
+
+<img width="600" src="http://maps.googleapis.com/maps/api/staticmap?center=<%=@brewery.latitude%>,<%=@brewery.longitude%>&zoom=12&scale=false&size=600x300&maptype=roadmap&key=AIzaSyDaU7jtxWt5aIcjI4VBnjfVkM2C9PYJEb8&format=png&visual_refresh=true&markers=size:mid%7Ccolor:0xff0000%7Clabel:1%7C<%= @brewery.latitude %>,<%= @brewery.longitude %>" alt="Google Map of Chicago, IL">
+
+
+<!-- IN RAILS..... -->
+<h3>Nearby locations</h3>
+
+<% @breweries.each do |loc| %>
+  <% loc.nearbys(20) %>
+  <a href="/breweries/<%= loc.id %>"><%= loc.address %></a>
+<% end %>

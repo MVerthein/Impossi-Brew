@@ -1,0 +1,7 @@
+<% if beers %>
+  <% beers.each do |beer| %>
+    <h2 class="beer"><%= beer.name %></h2>
+    <h3 class="beer">Style: <a href="/styles/<%= beer.style.id %>"><%= beer.style.name %></a></h3>
+    <p><%= beer.description %></p>
+  <% end %>
+<% end %>

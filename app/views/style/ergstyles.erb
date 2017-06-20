@@ -1,0 +1,8 @@
+<div class="ergstyles">
+	<h3>List of Beer Styles</h3>
+	<ul class="category">
+	<% @categories.each do |category|%>
+		<li class="cat-name"><a class="ergcat-link" href="/categories/<%=category.id%>"><%=category.name%></li>
+	<%end%>
+	</ul>
+</div>

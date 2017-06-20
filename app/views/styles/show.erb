@@ -1,0 +1,27 @@
+
+<aside class="style-aside-list">
+  <div class="style-info">
+    <h1><a class="style-heading-link" href="/styles/<%= @style.id %>"><%= @style.name %></a></h1>
+    <p><%= @style.description %></p>
+  </div>
+  <% if @locations %>
+    <h2>Places To Try</h2>
+    <div class="locations-nearby">
+    <%= erb :'location/_show', locals: { locations: @locations } %>
+    </div>
+  <% end %>
+  <div class="beer-aside-list">
+    <h3>Beers to Try</h3>
+    <% @style.beers.each do |beer| %>
+      <p><%= beer.name %></p>
+    <% end %>
+  </div>
+  <div class="related-styles-list">
+    <h2 class="related-styles">Related Styles</h2>
+    <ul>
+      <% @style.category.styles.each do |style| %>
+      <li><a href="/styles/<%= style.id %>"><%= style.name %></a></li>
+      <% end %>
+    </ul>
+  </div>
+</aside>

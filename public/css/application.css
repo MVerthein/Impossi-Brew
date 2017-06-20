@@ -1,0 +1,232 @@
+/****** General ******/
+a {
+	text-decoration: none;
+}
+
+
+/****** Header Layout ******/
+header {
+	background-color: #1A82A5;
+	height: 7em;
+}
+header a, header p {
+	text-decoration: none;
+	color: #F0ECEB;
+	font-weight: bold;
+}
+
+header h2 {
+	margin: 0;
+	font-size: 50px;
+	font-family: 'Passion One', cursive;
+	font-stretch: expanded;
+	font-weight: lighter;
+}
+
+.logo {
+	display: inline-block;
+	margin-left: 3em;
+	height: 5em;
+}
+
+.search-bar {
+	margin-top: 1em;
+	float: right;
+	display: inline-block;
+	margin-right: 1em;
+	height: 5em;
+}
+
+.search-bar input {
+	margin-right: 0.5em;
+}
+.search-button, .zip-button {
+	background-color: #DBBE83;
+	width: 5em;
+	height: 1.5em;
+}
+
+.search-bar a {
+	width: 17em;
+}
+
+.search-box, .location-box {
+	width: 27em;
+	font-size: 0.7em;
+	float: right;
+}
+
+.links {
+	display: block;
+	width: 100%;
+	background-color: red;
+	background-color: #165C73;
+	box-shadow: 0px 5px 12px 0px rgba(0, 0, 0, .2);
+}
+
+.links a {
+	margin-right: 10em;
+	margin-left: 2em;
+	text-decoration: none;
+	color: white;
+
+}
+
+.logo-link {
+	text-decoration: none;
+	color: black;
+}
+
+
+/****** About Page ******/
+.mission {
+	width: 50em;
+	margin-left: 2em;
+}
+
+.mission p {
+	display: inline-block;
+	float: left;
+	width: 50%;
+}
+
+.mission img {
+	display: inline-block;
+	height: 20em;
+	margin-left: 5em;
+}
+
+
+/****** Login ******/
+.login-bar {
+	color: #F0ECEB;
+	font-weight: bold;
+}
+
+.login-bar a {
+	text-decoration: none;
+	color: #F0ECEB;
+	font-weight: bold;
+}
+
+
+/****** Register ******/
+.body {
+	width: 60em;
+	margin-left: 10em;
+}
+
+body {
+	background-color: #CDD6CF;
+}
+
+.register {
+	margin-left: 18em;
+	height: 10em;
+	width: 22em;
+	border: 1px solid black;
+	padding-bottom: 2em;
+	background: linear-gradient(to bottom right, #99CEE0, #165C73);
+}
+
+.register h3 {
+	margin-left: 2em;
+}
+
+.reg-form {
+	margin-left: 5em;
+}
+
+.reg-form input {
+	display: block;
+	margin-bottom: 0.3em;
+}
+.ergstyles {
+	height: 40em;
+
+}
+
+/****** Beer Style List ******/
+.style-list {
+	width: 30%;
+	float: left;
+}
+
+a.style-heading-link {
+	line-height: 1.5em;
+	font-size: 1em;
+	text-decoration: none;
+	color: #1A82A5;
+	font-style: oblique;
+	background-color: white;
+	padding: .2em;
+	box-shadow: 8px 8px 0px 0px #165C73;
+}
+
+.style-info {
+	border-bottom: 2px solid #9B6355;
+}
+
+.style-aside-list {
+	background: #DBBE83;
+	padding: 1em;
+}
+
+
+/****** Related Styles List ******/
+.related-styles-list {
+	text-align: left;
+}
+
+.related-styles-list ul {
+	padding: 0;
+	margin: 0;
+}
+
+.related-styles-list ul li {
+	list-style: none;
+}
+
+.related-styles-list a {
+	color: #9B6355;
+}
+
+
+/****** Beer List ******/
+.beer-list {
+	width: 60%;
+	float: left;
+	background: white;
+	padding: 1em;
+}
+
+.beer-list p {
+	color: #333;
+}
+
+h2.beer {
+	padding: .3em;
+	background: #1A82A5;
+	margin-bottom: 0;
+	color: white;
+	box-shadow: 0px 5px 5px 0px rgba(0,0,0,.15);
+}
+
+h3.beer {
+	margin-top: 0;
+}
+
+h3.beer, h3.beer a {
+	color: #9B6355;
+	padding-left: .3em;
+}
+
+/*locations*/
+.loc-search-results {
+	background-color: #DBBE83;
+}
+.some-block {
+	display: inline-block;
+	width: 18em;
+	margin-left: 1em;
+}
